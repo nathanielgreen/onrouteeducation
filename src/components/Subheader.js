@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from "react"
+import styled from "styled-components"
 
 const Text = styled.h2`
   font-size: 2rem;
@@ -7,15 +7,16 @@ const Text = styled.h2`
 `
 
 const Wrapper = styled.section`
+  align-self: flex-start;
   width: 60%;
 
-  @media(mix-width: 720px) {
+  @media (mix-width: 720px) {
     width: 80%;
   }
 `
 
 export default ({ text }) => (
   <Wrapper>
-    <Text>{ text }</Text>
+    <Text>{text}</Text>
   </Wrapper>
 )
