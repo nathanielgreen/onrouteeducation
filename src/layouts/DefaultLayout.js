@@ -15,13 +15,19 @@ body {
   height: 100vh;
   font-family: 'Barlow', Arial, sans-serif;
 }
+a {
+  text-decoration: none;
+}
 `
 export default ({ children }) => (
   <React.Fragment>
     <Helmet>
-      <link href="https://fonts.googleapis.com/css?family=Barlow:400,700&display=swap" rel="stylesheet" />
+      <link
+        href="https://fonts.googleapis.com/css?family=Barlow:400,700&display=swap"
+        rel="stylesheet"
+      />
     </Helmet>
     <GlobalStyle />
-    { children }
+    {children}
   </React.Fragment>
 )
