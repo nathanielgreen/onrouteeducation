@@ -28,7 +28,7 @@ We value our relationships with schools and seek to sustain these as partners pr
 
 export default () => (
   <DefaultLayout>
-    <Header text={stuff.header} color={red} />
+    <Header text={stuff.header} color={red} image="images/uploads/header.jpg" />
     <Padding>
       <Subheader text={stuff.subheader} />
       <Paragraph text={stuff.content} />
@@ -39,17 +39,20 @@ export default () => (
         text="leadership coaching & mentouring"
         color={blue}
         alignSelf="flex-start"
+        image="images/uploads/coaching.jpg"
       ></NavBox>
       <NavBox
         slug="training"
         text="virtual & in school training & advice"
         color={red}
+        image="images/uploads/training.jpg"
       ></NavBox>
       <NavBox
         slug="curriculum-development"
         text="curriculum development"
         color={orange}
         alignSelf="flex-end"
+        image="images/uploads/curriculum-development.jpg"
       ></NavBox>
     </Padding>
     <Padding>

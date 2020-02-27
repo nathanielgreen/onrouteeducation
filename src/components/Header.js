@@ -16,6 +16,10 @@ const Wrapper = styled.section`
   width: 100%;
   height: 85vh;
   position: relative;
+  background-image: url(${props => props.image});
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
 
   @media (min-width: 720px) {
     height: 65vh;
@@ -36,8 +40,8 @@ const Word = styled.span`
   display: block;
 `
 
-export default ({ text, color }) => (
-  <Wrapper>
+export default ({ text, color, image }) => (
+  <Wrapper image={image}>
     <Overlay color={color} />
     <Text>
       {text

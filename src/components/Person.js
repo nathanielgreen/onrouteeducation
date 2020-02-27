@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   height: 100vw;
   max-height: 350px;
   position: relative;
-  background: linear-gradient(lightgrey, lightgrey, black), grey;
+  background: linear-gradient(lightgrey, grey, #292e44), grey;
 `
 
 const BackgroundImage = styled.div`
@@ -35,7 +35,7 @@ const BannerBackground = styled.div`
   position: absolute;
   background: black;
   z-index: 1;
-  opacity: 0.75;
+  opacity: 0.95;
 `
 
 const Name = styled.h3`

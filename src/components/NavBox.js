@@ -8,8 +8,12 @@ const BoxWrapper = styled.div`
   max-width: 350px;
   max-height: 250px;
   align-self: ${props => props.alignSelf};
+  background-image: url(${props => props.image});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
 
-  background: ${props => props.color};
   border-radius: 6px;
   margin: 15px 50px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
@@ -26,6 +30,24 @@ const BoxWrapper = styled.div`
   }
 `
 
+const Background = styled.div`
+  background: ${props => props.color};
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border-radius: 6px;
+  opacity: 85%;
+`
+
+const Content = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  opacity: 1;
+`
+
 const Text = styled.h3`
   font-size: 1.5rem;
   width: 50%;
@@ -34,10 +56,13 @@ const Text = styled.h3`
   text-decoration: none;
 `
 
-export default ({ text, slug, color, alignSelf }) => (
-  <BoxWrapper alignSelf={alignSelf} color={color}>
-    <Link to={slug}>
-      <Text>{text}</Text>
-    </Link>{" "}
+export default ({ text, slug, color, alignSelf, image }) => (
+  <BoxWrapper alignSelf={alignSelf} color={color} image={image}>
+    <Background color={color} />
+    <Content>
+      <Link to={slug}>
+        <Text>{text}</Text>
+      </Link>
+    </Content>
   </BoxWrapper>
 )

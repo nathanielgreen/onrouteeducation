@@ -30,7 +30,7 @@ export default function Template({ data }) {
 
   return (
     <DefaultLayout>
-      <Header text={frontmatter.title} color={color()} />
+      <Header text={frontmatter.title} color={color()} image={frontmatter.image} />
       <Padding>
         <Subheader text={frontmatter.title} />
         <Body dangerouslySetInnerHTML={{ __html: html }} />
@@ -46,6 +46,7 @@ export const pageQuery = graphql`
         path
         title
         color
+        image
       }
     }
   }
