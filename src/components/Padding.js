@@ -9,6 +9,7 @@ const Shell = styled.div`
 `
 
 const Wrapper = styled.div`
+  width: ${props => props.width ? props.width : 'auto'};
   padding: 0 26px;
   max-width: 850px;
   display: flex;
@@ -16,8 +17,8 @@ const Wrapper = styled.div`
   align-items: center;
 `
 
-export default ({ children }) => (
+export default ({ children, width }) => (
   <Shell>
-    <Wrapper>{children}</Wrapper>
+    <Wrapper width={width}>{children}</Wrapper>
   </Shell>
 )

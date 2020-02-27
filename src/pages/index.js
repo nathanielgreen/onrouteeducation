@@ -33,22 +33,24 @@ export default () => (
       <Subheader text={stuff.subheader} />
       <Paragraph text={stuff.content} />
     </Padding>
-    <Padding>
-        <NavBox
-          slug="coaching"
-          text="leadership coaching & mentouring"
-          color={blue}
-        ></NavBox>
-        <NavBox
-          slug="training"
-          text="virtual & in school training & advice"
-          color={red}
-        ></NavBox>
-        <NavBox
-          slug="curriculum-development"
-          text="curriculum development"
-          color={orange}
-        ></NavBox>
+    <Padding width="100%">
+      <NavBox
+        slug="coaching"
+        text="leadership coaching & mentouring"
+        color={blue}
+        alignSelf="flex-start"
+      ></NavBox>
+      <NavBox
+        slug="training"
+        text="virtual & in school training & advice"
+        color={red}
+      ></NavBox>
+      <NavBox
+        slug="curriculum-development"
+        text="curriculum development"
+        color={orange}
+        alignSelf="flex-end"
+      ></NavBox>
     </Padding>
     <Padding>
       <Subheader text={stuff.whoweare.header} />
@@ -64,7 +66,6 @@ export default () => (
         title="Experienced Educator & Founder"
         image="images/uploads/helen-transparent.png"
         backgroundPosition="right"
-
       />
       <Paragraph text={stuff.whoweare.content2} />
     </Padding>
