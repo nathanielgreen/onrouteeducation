@@ -10,7 +10,7 @@ const Shell = styled.div`
 
 const Wrapper = styled.div`
   width: ${props => props.width ? props.width : 'auto'};
-  padding: 0 26px;
+  margin: 0 26px;
   max-width: 850px;
   display: flex;
   flex-direction: column;

@@ -40,16 +40,36 @@ const Word = styled.span`
   display: block;
 `
 
+const splitTitle = title => {
+  const wordArr = title.toLowerCase().split(" ")
+  const newWordArr = []
+  wordArr.forEach(word => {
+    switch (word) {
+      case "&":
+        newWordArr[newWordArr.length - 1] = `${
+          newWordArr[newWordArr.length - 1]
+        } &`
+        break
+      case "school":
+        newWordArr[newWordArr.length - 1] = `${
+          newWordArr[newWordArr.length - 1]
+        } school`
+        break
+      default:
+        newWordArr.push(word)
+    }
+  })
+
+  return newWordArr
+}
+
 export default ({ text, color, image }) => (
   <Wrapper image={image}>
     <Overlay color={color} />
     <Text>
-      {text
-        .toLowerCase()
-        .split(" ")
-        .map((letter, index) => (
-          <Word key={index}>{letter}</Word>
-        ))}
+      {splitTitle(text).map((letter, index) => (
+        <Word key={index}>{letter}</Word>
+      ))}
     </Text>
   </Wrapper>
 )
