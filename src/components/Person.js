@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   height: 100vw;
   max-height: 350px;
   position: relative;
-  background: linear-gradient(grey, grey, black), grey;
+  background: linear-gradient(lightgrey, lightgrey, black), grey;
 `
 
 const BackgroundImage = styled.div`
@@ -16,6 +16,10 @@ const BackgroundImage = styled.div`
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  @media(max-width: 600px) {
+    background-position: ${props => props.backgroundPosition};
+    background-size: cover;
+  }
 `
 
 const Banner = styled.div`
@@ -55,9 +59,9 @@ const BannerContent = styled.div`
   height: 100%;
 `
 
-export default ({ name, title, image }) => (
+export default ({ name, title, image, backgroundPosition }) => (
   <Wrapper>
-    <BackgroundImage image={image} />
+    <BackgroundImage backgroundPosition={backgroundPosition} image={image} />
     <Banner>
       <BannerBackground />
       <BannerContent>

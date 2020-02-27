@@ -34,21 +34,21 @@ export default () => (
       <Paragraph text={stuff.content} />
     </Padding>
     <Padding>
-      <NavBox
-        slug="coaching"
-        text="leadership coaching & mentouring"
-        color={blue}
-      ></NavBox>
-      <NavBox
-        slug="training"
-        text="virtual & in school training & advice"
-        color={red}
-      ></NavBox>
-      <NavBox
-        slug="curriculum-development"
-        text="curriculum development"
-        color={orange}
-      ></NavBox>
+        <NavBox
+          slug="coaching"
+          text="leadership coaching & mentouring"
+          color={blue}
+        ></NavBox>
+        <NavBox
+          slug="training"
+          text="virtual & in school training & advice"
+          color={red}
+        ></NavBox>
+        <NavBox
+          slug="curriculum-development"
+          text="curriculum development"
+          color={orange}
+        ></NavBox>
     </Padding>
     <Padding>
       <Subheader text={stuff.whoweare.header} />
@@ -57,11 +57,14 @@ export default () => (
         name="Mary van der Heijden"
         title="Experienced Educator & Founder"
         image="images/uploads/mary-transparent.png"
+        backgroundPosition="left"
       />
       <Person
         name="Helen Barrett"
         title="Experienced Educator & Founder"
         image="images/uploads/helen-transparent.png"
+        backgroundPosition="right"
+
       />
       <Paragraph text={stuff.whoweare.content2} />
     </Padding>

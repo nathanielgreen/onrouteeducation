@@ -8,7 +8,7 @@ const Text = styled.h2`
 
 const Wrapper = styled.section`
   align-self: flex-start;
-  width: 60%;
+  width: 70%;
 
   @media (mix-width: 720px) {
     width: 80%;
