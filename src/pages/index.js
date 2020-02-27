@@ -56,9 +56,13 @@ export default () => (
       <Person
         name="Mary van der Heijden"
         title="Experienced Educator & Founder"
-        image="https://knightfrankearlycareers.com/assets/local-images/home/slider/1.jpg"
+        image="images/uploads/mary-transparent.png"
       />
-      <Person name="Helen Barrett" title="Experienced Educator & Founder" />
+      <Person
+        name="Helen Barrett"
+        title="Experienced Educator & Founder"
+        image="images/uploads/helen-transparent.png"
+      />
       <Paragraph text={stuff.whoweare.content2} />
     </Padding>
   </DefaultLayout>
