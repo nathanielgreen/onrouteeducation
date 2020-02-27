@@ -5,6 +5,7 @@ import Padding from "./Padding.js"
 import { red } from "../utils/colors.js"
 
 const Wrapper = styled.footer`
+  margin-top: 40px;
   width: 100vw;
   color: white;
   background: ${red};

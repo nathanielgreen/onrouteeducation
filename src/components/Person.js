@@ -31,17 +31,24 @@ const BannerBackground = styled.div`
 `
 
 const Name = styled.h3`
+  color: white;
   font-weight: bold;
   font-size: 1.1rem;
-  z-index: 2;
   margin: 10px;
 `
 
 const Title = styled.h4`
+  color: white;
   font-weight: normal;
   font-size: 0.9rem;
-  z-index: 2;
   margin: 10px;
+`
+
+const BannerContent = styled.div`
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 `
 
 export default ({ name, title, image }) => (
@@ -49,8 +56,10 @@ export default ({ name, title, image }) => (
     <BackgroundImage />
     <Banner>
       <BannerBackground />
-      <Name>{name}</Name>
-      <Title>{title}</Title>
+      <BannerContent>
+        <Name>{name}</Name>
+        <Title>{title}</Title>
+      </BannerContent>
     </Banner>
   </Wrapper>
 )
