@@ -10,7 +10,7 @@ const BoxWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #ff8b7d;
+  background: ${props => props.color};
   border-radius: 6px;
   margin: 20px 0;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
@@ -24,9 +24,9 @@ const Text = styled.h3`
   text-decoration: none;
 `
 
-export default ({ text, slug }) => (
+export default ({ text, slug, color }) => (
   <Link to={slug}>
-    <BoxWrapper>
+    <BoxWrapper color={color}>
       <Text>{text}</Text>
     </BoxWrapper>
   </Link>

@@ -2,6 +2,8 @@ import React from "react"
 import Helmet from "react-helmet"
 import { createGlobalStyle } from "styled-components"
 
+import Footer from "../components/Footer.js"
+
 const GlobalStyle = createGlobalStyle`
 html {
   width: 100vw;
@@ -29,5 +31,6 @@ export default ({ children }) => (
     </Helmet>
     <GlobalStyle />
     {children}
+    <Footer />
   </React.Fragment>
 )
