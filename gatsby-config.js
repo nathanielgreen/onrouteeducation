@@ -6,7 +6,17 @@
 
 module.exports = {
   siteMetadata: {
-    title: `tesy test`
+    title: `tesy test`,
   },
-  plugins: [`gatsby-plugin-styled-components`],
+  plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/data/pages/`,
+      },
+    },
+    `gatsby-transformer-remark`,
+    `gatsby-plugin-styled-components`,
+  ],
 }
