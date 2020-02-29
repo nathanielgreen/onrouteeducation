@@ -9,6 +9,7 @@ module.exports = {
     title: "On Route Education",
   },
   plugins: [
+    `gatsby-plugin-netlify-cms`,
     `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,

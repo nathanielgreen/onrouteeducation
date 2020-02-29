@@ -1,0 +1,36 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+collections:
+  - name: "home"
+    delete: false
+    editor:
+      preview: false
+    format: json
+    label: "Home Page"
+    folder: "src/data/home/"
+    create: false
+    slug: "data"
+    fields:
+      - { label: "Heading", name: "heading", widget: "string" }
+      - label: "Services"
+        name: "services"
+        widget: "object"
+        fields:
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Paragraph", name: "paragraph", widget: "string" }
+          - label: "Links"
+            name: "links"
+            collapsed: false
+            widget: "list"
+            fields:
+              - { label: "Text", name: "text", widget: "string" }
+              - { label: "Link/URL", name: "link", widget: "string" }
+              - label: "Background Image"
+                name: "image"
+                media_library:
+                  config:
+                    multiple: false
