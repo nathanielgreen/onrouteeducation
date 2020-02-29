@@ -6,9 +6,17 @@
 
 module.exports = {
   siteMetadata: {
-    title: `tesy test`,
+    title: "On Route Education",
   },
   plugins: [
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `home`,
+        path: `${__dirname}/src/data/home/`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
