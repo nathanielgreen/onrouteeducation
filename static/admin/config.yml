@@ -65,7 +65,7 @@ collections:
   - name: "pages"
     editor:
       preview: false
-    label: "Home Page"
+    label: "Pages"
     folder: "src/data/pages/"
     create: false
     slug: "{{slug}}"
@@ -76,10 +76,10 @@ collections:
         hint: "This is the slug that appears in the url (e.g. /about, /blog)"
         widget: "string"
       - { label: "Main Body", name: "body", widget: "markdown" }
-        - label: "Header Color"
-          name: "color"
-          widget: "select"
-          options:
-            - { label: "Red", value: "#FF8B7D" }
-            - { label: "Blue", value: "#7DB5FF" }
-            - { label: "Orange", value: "#FFC8A5" }
+      - label: "Header Color"
+        name: "color"
+        widget: "select"
+        options:
+          - { label: "Red", value: "#FF8B7D" }
+          - { label: "Blue", value: "#7DB5FF" }
+          - { label: "Orange", value: "#FFC8A5" }
