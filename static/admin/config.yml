@@ -29,6 +29,13 @@ collections:
             fields:
               - { label: "Text", name: "text", widget: "string" }
               - { label: "Link/URL", name: "link", widget: "string" }
+              - label: "Box Color"
+                name: "color"
+                widget: "select"
+                options:
+                  - { label: "Red", value: "#FF8B7D" }
+                  - { label: "Blue", value: "#7DB5FF" }
+                  - { label: "Orange", value: "#FFC8A5" }
               - label: "Background Image"
                 name: "image"
                 widget: "image"
