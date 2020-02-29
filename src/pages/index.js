@@ -12,7 +12,7 @@ import DefaultLayout from "../layouts/DefaultLayout.js"
 import { red, blue, orange } from "../utils/colors.js"
 
 const stuff = {
-  header: "On Route Education.",
+  header: "On Route Education",
   subheader: "Sustainable solutions for education innovation.",
   content:
     "We lead the competition by offering schools a unique combination of professional coaching and training services that are entirely bespoke and deliberately geared towards bringing instant and high quality professional learning to educators anywhere in the world. We are there for you wherever and whenever you need us.",
