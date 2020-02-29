@@ -41,3 +41,17 @@ collections:
         fields:
           - { label: "Heading", name: "heading", widget: "string" }
           - { label: "Paragraph 1", name: "paragraph1", widget: "text" }
+          - label: "People"
+            name: "people"
+            collapsed: false
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Image"
+                name: "image"
+                widget: "image"
+                media_library:
+                  config:
+                    multiple: false
+          - { label: "Paragraph 2", name: "paragraph2", widget: "text" }
