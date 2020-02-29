@@ -21,7 +21,7 @@ collections:
         widget: "object"
         fields:
           - { label: "Heading", name: "heading", widget: "string" }
-          - { label: "Paragraph", name: "paragraph", widget: "string" }
+          - { label: "Paragraph", name: "paragraph", widget: "text" }
           - label: "Links"
             name: "links"
             collapsed: false
@@ -35,3 +35,9 @@ collections:
                 media_library:
                   config:
                     multiple: false
+      - label: "Who we are"
+        name: "whoWeAre"
+        widget: "object"
+        fields:
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Paragraph 1", name: "paragraph1", widget: "text" }
