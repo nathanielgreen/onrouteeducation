@@ -62,3 +62,24 @@ collections:
                   config:
                     multiple: false
           - { label: "Paragraph 2", name: "paragraph2", widget: "text" }
+  - name: "pages"
+    editor:
+      preview: false
+    label: "Home Page"
+    folder: "src/data/pages/"
+    create: false
+    slug: "{{slug}}"
+    fields:
+      - { label: "Page Title", name: "title", widget: "string" }
+      - label: "Path"
+        name: "path"
+        hint: "This is the slug that appears in the url (e.g. /about, /blog)"
+        widget: "string"
+      - { label: "Main Body", name: "body", widget: "markdown" }
+        - label: "Header Color"
+          name: "color"
+          widget: "select"
+          options:
+            - { label: "Red", value: "#FF8B7D" }
+            - { label: "Blue", value: "#7DB5FF" }
+            - { label: "Orange", value: "#FFC8A5" }

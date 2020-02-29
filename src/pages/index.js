@@ -29,7 +29,7 @@ const HomePage = ({ data }) => {
   return (
     <DefaultLayout>
       <Header
-        text={pageData.heading}
+        text={pageData.services.heading}
         color={red}
         image="images/uploads/header.jpg"
       />
