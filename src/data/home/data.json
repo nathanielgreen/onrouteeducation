@@ -7,18 +7,21 @@
       {
         "link": "/coaching",
         "text": "leadership coaching & mentoring",
-        "image": "uploads/coaching.jpg"
+        "image": "uploads/coaching.jpg",
+        "color": "#7DB5FF"
       },
       {
         "link": "/training",
         "text": "virtual & in school training & advice",
-        "image": "uploads/training.jpg"
+        "image": "uploads/training.jpg",
+        "color": "#FF8B7D"
       },
       {
         "link": "/curriculum-development",
         "text": "curriculum development",
-        "image": "uploads/uploads/curriculum-development.jpg"
-      }  
+        "image": "uploads/uploads/curriculum-development.jpg",
+        "color": "#FFC8A5"
+      }
     ]
   },
   "whoWeAre": {
@@ -28,15 +31,14 @@
       {
         "name": "Mary van der Heijden",
         "title": "Experienced Educator & Founder",
-        "image": "uploads/mary-transparent.png"   
+        "image": "uploads/mary-transparent.png"
       },
       {
         "name": "Helen Barrett",
         "title": "Experienced Educator & Founder",
-        "image": "uploads/mary-transparent.png"
+        "image": "/images/uploads/helen-transparent.png"
       }
     ],
     "paragraph2": "Based in the UK, our substantial experience of international education and extensive professional network means we can offer highly bespoke training, consultancy and coaching that effectively brings about positive and sustainable school improvement, leadership development and professional success. We value our relationships with schools and seek to sustain these as partners proud to be supporting their long-term learning journey"
   }
-
 }
