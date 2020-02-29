@@ -29,12 +29,12 @@ const HomePage = ({ data }) => {
   return (
     <DefaultLayout>
       <Header
-        text={pageData.services.heading}
+        text={pageData.heading}
         color={red}
         image="images/uploads/header.jpg"
       />
       <Padding>
-        <Subheader text={pageData.services.subheading} />
+        <Subheader text={pageData.services.heading} />
         <Paragraph text={pageData.services.paragraph} />
       </Padding>
       <Padding width="100%">
