@@ -36,7 +36,7 @@ export default () => (
     <Padding width="100%">
       <NavBox
         slug="coaching"
-        text="leadership coaching & mentouring"
+        text="leadership coaching & mentoring"
         color={blue}
         alignSelf="flex-start"
         image="images/uploads/coaching.jpg"
