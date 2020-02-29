@@ -24,6 +24,7 @@ a {
 export default ({ children }) => (
   <React.Fragment>
     <Helmet>
+      <title>On Route Education</title>
       <link
         href="https://fonts.googleapis.com/css?family=Barlow:400,700&display=swap"
         rel="stylesheet"
