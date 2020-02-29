@@ -8,7 +8,17 @@
         "link": "/coaching",
         "text": "leadership coaching & mentoring",
         "image": "uploads/coaching.jpg"
-      }
+      },
+      {
+        "link": "/training",
+        "text": "virtual & in school training & advice",
+        "image": "uploads/training.jpg"
+      },
+      {
+        "link": "/curriculum-development",
+        "text": "curriculum development",
+        "image": "uploads/uploads/curriculum-development.jpg"
+      }  
     ]
   },
   "whoWeAre": {
