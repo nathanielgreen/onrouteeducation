@@ -43,7 +43,7 @@ collections:
                   config:
                     multiple: false
       - label: "Who we are"
-        name: "whoWeAre"
+        name: "who"
         widget: "object"
         fields:
           - { label: "Heading", name: "heading", widget: "string" }
