@@ -7,31 +7,31 @@
       {
         "link": "/coaching",
         "text": "leadership coaching & mentoring",
-        "image": "uploads/coaching.jpg",
+        "image": "/images/uploads/coaching.jpg",
         "color": "#7DB5FF"
       },
       {
         "link": "/training",
         "text": "virtual & in school training & advice",
-        "image": "uploads/training.jpg",
+        "image": "/images/uploads/training.jpg",
         "color": "#FF8B7D"
       },
       {
         "link": "/curriculum-development",
         "text": "curriculum development",
-        "image": "uploads/uploads/curriculum-development.jpg",
+        "image": "/images/uploads/curriculum-development.jpg",
         "color": "#FFC8A5"
       }
     ]
   },
-  "whoWeAre": {
+  "who": {
     "heading": "Who we are.",
     "paragraph1": "Experienced educators, Mary van der Heijden and Helen Barrett founded On Route Education as a service dedicated to helping schools successfully confront the challenges of modern, professional practice.",
     "people": [
       {
         "name": "Mary van der Heijden",
         "title": "Experienced Educator & Founder",
-        "image": "uploads/mary-transparent.png"
+        "image": "/images/uploads/mary-transparent.png"
       },
       {
         "name": "Helen Barrett",

@@ -9,68 +9,94 @@ import Person from "../components/Person.js"
 
 import DefaultLayout from "../layouts/DefaultLayout.js"
 
-import { red, blue, orange } from "../utils/colors.js"
+import { red } from "../utils/colors.js"
 
-const stuff = {
-  header: "On Route Education",
-  subheader: "Sustainable solutions for education innovation.",
-  content:
-    "We lead the competition by offering schools a unique combination of professional coaching and training services that are entirely bespoke and deliberately geared towards bringing instant and high quality professional learning to educators anywhere in the world. We are there for you wherever and whenever you need us.",
-  whoweare: {
-    header: "Who we are.",
-    content:
-      "Experienced educators, Mary van der Heijden and Helen Barrett founded On Route Education as a service dedicated to helping schools successfully confront the challenges of modern, professional practice.",
-    content2: `Based in the UK, our substantial experience of international education and extensive professional network means we can offer highly bespoke training, consultancy and coaching that effectively brings about positive and sustainable school improvement, leadership development and professional success.
+const HomePage = ({ data }) => {
+  const pageData = data.allHomeJson.edges[0].node
+  console.log(pageData)
+  const boxPositioning = index => {
+    switch (index) {
+      case 0:
+        return "flex-start"
 
-We value our relationships with schools and seek to sustain these as partners proud to be supporting their long-term learning journey`,
-  },
+      case 2:
+        return "flex-end"
+      default:
+        return "center"
+    }
+  }
+
+  return (
+    <DefaultLayout>
+      <Header
+        text={pageData.heading}
+        color={red}
+        image="images/uploads/header.jpg"
+      />
+      <Padding>
+        <Subheader text={pageData.services.subheading} />
+        <Paragraph text={pageData.services.paragraph} />
+      </Padding>
+      <Padding width="100%">
+        {pageData.services.links.map((link, index) => (
+          <NavBox
+            key={index}
+            slug={link.link}
+            text={link.text}
+            color={link.color}
+            alignSelf={boxPositioning(index)}
+            image={link.image}
+          ></NavBox>
+        ))}
+      </Padding>
+      <Padding>
+        <Subheader text={pageData.who.heading} />
+        <Paragraph text={pageData.who.paragraph1} />
+        {pageData.who.people.map((person, index) => (
+          <Person
+            key={index}
+            name={person.name}
+            title={person.title}
+            image={person.image}
+            backgroundPosition="left"
+          />
+        ))}
+        <Paragraph text={pageData.who.paragraph2} />
+      </Padding>
+    </DefaultLayout>
+  )
 }
 
-export default () => (
-  <DefaultLayout>
-    <Header text={stuff.header} color={red} image="images/uploads/header.jpg" />
-    <Padding>
-      <Subheader text={stuff.subheader} />
-      <Paragraph text={stuff.content} />
-    </Padding>
-    <Padding width="100%">
-      <NavBox
-        slug="coaching"
-        text="leadership coaching & mentoring"
-        color={blue}
-        alignSelf="flex-start"
-        image="images/uploads/coaching.jpg"
-      ></NavBox>
-      <NavBox
-        slug="training"
-        text="virtual & in school training & advice"
-        color={red}
-        image="images/uploads/training.jpg"
-      ></NavBox>
-      <NavBox
-        slug="curriculum-development"
-        text="curriculum development"
-        color={orange}
-        alignSelf="flex-end"
-        image="images/uploads/curriculum-development.jpg"
-      ></NavBox>
-    </Padding>
-    <Padding>
-      <Subheader text={stuff.whoweare.header} />
-      <Paragraph text={stuff.whoweare.content} />
-      <Person
-        name="Mary van der Heijden"
-        title="Experienced Educator & Founder"
-        image="images/uploads/mary-transparent.png"
-        backgroundPosition="left"
-      />
-      <Person
-        name="Helen Barrett"
-        title="Experienced Educator & Founder"
-        image="images/uploads/helen-transparent.png"
-        backgroundPosition="right"
-      />
-      <Paragraph text={stuff.whoweare.content2} />
-    </Padding>
-  </DefaultLayout>
-)
+export const query = graphql`
+  {
+    allHomeJson {
+      edges {
+        node {
+          heading
+          services {
+            heading
+            paragraph
+            links {
+              link
+              text
+              color
+              image
+            }
+          }
+          who {
+            heading
+            people {
+              name
+              title
+              image
+            }
+            paragraph1
+            paragraph2
+          }
+        }
+      }
+    }
+  }
+`
+
+export default HomePage
