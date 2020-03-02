@@ -15,22 +15,14 @@ const Body = styled.div`
 export default function Template({ data }) {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
-  console.log(frontmatter.color)
-
-  const color = () => {
-    switch (frontmatter.color) {
-      case "blue":
-        return blue
-      case "orange":
-        return orange
-      default:
-        return red
-    }
-  }
 
   return (
     <DefaultLayout>
-      <Header text={frontmatter.title} color={color()} image={frontmatter.image} />
+      <Header
+        text={frontmatter.title}
+        color={frontmatter.color}
+        image={frontmatter.image}
+      />
       <Padding>
         <Subheader text={frontmatter.title} />
         <Body dangerouslySetInnerHTML={{ __html: html }} />
