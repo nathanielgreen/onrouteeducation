@@ -12,13 +12,11 @@ import DefaultLayout from "../layouts/DefaultLayout.js"
 import { red } from "../utils/colors.js"
 
 const HomePage = ({ data }) => {
-  const pageData = data.allHomeJson.edges[0].node
-  console.log(pageData)
+  const pageData = data.homeJson
   const boxPositioning = index => {
     switch (index) {
       case 0:
         return "flex-start"
-
       case 2:
         return "flex-end"
       default:
@@ -69,31 +67,27 @@ const HomePage = ({ data }) => {
 
 export const query = graphql`
   {
-    allHomeJson {
-      edges {
-        node {
-          heading
-          services {
-            heading
-            paragraph
-            links {
-              link
-              text
-              color
-              image
-            }
-          }
-          who {
-            heading
-            people {
-              name
-              title
-              image
-            }
-            paragraph1
-            paragraph2
-          }
+    homeJson {
+      heading
+      services {
+        heading
+        paragraph
+        links {
+          link
+          text
+          image
+          color
         }
+      }
+      who {
+        heading
+        people {
+          name
+          title
+          image
+        }
+        paragraph1
+        paragraph2
       }
     }
   }
