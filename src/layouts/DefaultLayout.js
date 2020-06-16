@@ -1,26 +1,27 @@
-import React from "react"
-import Helmet from "react-helmet"
-import { createGlobalStyle } from "styled-components"
+import React from "react";
+import Helmet from "react-helmet";
+import { createGlobalStyle } from "styled-components";
 
-import Footer from "../components/Footer.js"
+import Footer from "../components/Footer.js";
 
-const GlobalStyle = createGlobalStyle`
-html {
-  width: 100vw;
-}
-body {
-  background: #ffffff;
-  width: 100vw;
-  margin: 0;
-}
-#gatsby-focus-wrapper {
-  height: 100vh;
-  font-family: 'Barlow', Arial, sans-serif;
-}
-a {
-  text-decoration: none;
-}
-`
+export const GlobalStyle = createGlobalStyle`
+	html {
+		width: 100vw;
+	}
+	body {
+		background: #ffffff;
+		width: 100vw;
+		margin: 0;
+		font-family: 'Barlow', Arial, sans-serif;
+	}
+	#gatsby-focus-wrapper {
+		height: 100vh;
+	}
+	a {
+		text-decoration: none;
+	}
+`;
+
 export default ({ children }) => (
   <React.Fragment>
     <Helmet>
@@ -34,4 +35,4 @@ export default ({ children }) => (
     {children}
     <Footer />
   </React.Fragment>
-)
+);

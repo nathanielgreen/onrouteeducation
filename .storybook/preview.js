@@ -1,5 +1,15 @@
+import React from "react";
 import { action } from "@storybook/addon-actions";
+import { addDecorator } from "@storybook/react";
 
+import { GlobalStyle } from "../src/layouts/DefaultLayout.js";
+
+addDecorator(story => (
+  <>
+    <GlobalStyle />
+    {story()}
+  </>
+));
 // Gatsby's Link overrides:
 // Gatsby Link calls the `enqueue` & `hovering` methods on the global variable ___loader.
 // This global object isn't set in storybook context, requiring you to override it to empty functions (no-op),
