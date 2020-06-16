@@ -1,5 +1,8 @@
-import React from "react"
-import styled from "styled-components"
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
+
+import { red, blue, orange } from "../utils/colors.js";
 
 const Text = styled.h1`
   color: white;
@@ -7,7 +10,7 @@ const Text = styled.h1`
   z-index: 3;
   font-family: "Barlow", Arial, sans-serif;
   font-size: 2.5rem;
-`
+`;
 
 const Wrapper = styled.section`
   display: flex;
@@ -24,7 +27,7 @@ const Wrapper = styled.section`
   @media (min-width: 720px) {
     height: 65vh;
   }
-`
+`;
 
 const Overlay = styled.div`
   height: 100%;
@@ -34,36 +37,36 @@ const Overlay = styled.div`
   content: "";
   background: ${props => props.color};
   opacity: 0.85;
-`
+`;
 
 const Word = styled.span`
   display: block;
-`
+`;
 
 const splitTitle = title => {
-  const wordArr = title.toLowerCase().split(" ")
-  const newWordArr = []
+  const wordArr = title.toLowerCase().split(" ");
+  const newWordArr = [];
   wordArr.forEach(word => {
     switch (word) {
       case "&":
         newWordArr[newWordArr.length - 1] = `${
           newWordArr[newWordArr.length - 1]
-        } &`
-        break
+        } &`;
+        break;
       case "school":
         newWordArr[newWordArr.length - 1] = `${
           newWordArr[newWordArr.length - 1]
-        } school`
-        break
+        } school`;
+        break;
       default:
-        newWordArr.push(word)
+        newWordArr.push(word);
     }
-  })
+  });
 
-  return newWordArr
-}
+  return newWordArr;
+};
 
-export default ({ text, color, image }) => (
+const Header = ({ text, color, image }) => (
   <Wrapper image={image}>
     <Overlay color={color} />
     <Text>
@@ -72,4 +75,12 @@ export default ({ text, color, image }) => (
       ))}
     </Text>
   </Wrapper>
-)
+);
+
+Header.propTypes = {
+  text: PropTypes.string.isRequired,
+  color: PropTypes.oneOf([red, blue, orange]).isRequired,
+  image: PropTypes.string.isRequired,
+};
+
+export default Header;
