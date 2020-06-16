@@ -3,7 +3,6 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 
-import { red, blue, orange } from "../utils/colors.js";
 import DefaultLayout from "../layouts/DefaultLayout.js";
 import Padding from "../components/Padding.js";
 import Header from "../components/Header.js";

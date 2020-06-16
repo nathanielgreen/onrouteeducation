@@ -1,6 +1,7 @@
 import React from "react";
+import { graphql } from "gatsby";
+
 import { HomePageTemplate } from "../templates/homeTemplate.js";
-import PropTypes from "prop-types";
 
 const HomePage = ({ data }) => <HomePageTemplate {...data.homeJson} />;
 
