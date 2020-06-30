@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "./Header.js";
+import Header from "../Header.js";
 
-import { red } from "../utils/colors.js";
+import { red } from "../../utils/colors.js";
 
 export default {
   title: "Components/Header",
