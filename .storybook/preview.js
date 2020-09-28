@@ -3,7 +3,7 @@ import { action } from "@storybook/addon-actions";
 import DefaultTheme from "../src/themes/DefaultTheme";
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
-  layout: "centered",
+  layout: "fullscreen",
 };
 // Gatsby's Link overrides:
 // Gatsby Link calls the `enqueue` & `hovering` methods on the global variable ___loader.
