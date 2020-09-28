@@ -1,6 +1,9 @@
+import React from "react";
 import { action } from "@storybook/addon-actions";
+import DefaultTheme from "../src/themes/DefaultTheme";
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
+  layout: "centered",
 };
 // Gatsby's Link overrides:
 // Gatsby Link calls the `enqueue` & `hovering` methods on the global variable ___loader.
@@ -19,3 +22,11 @@ global.__BASE_PATH__ = "/";
 window.___navigate = pathname => {
   action("NavigateTo:")(pathname);
 };
+
+export const decorators = [
+  Story => (
+    <DefaultTheme>
+      <Story />
+    </DefaultTheme>
+  ),
+];
