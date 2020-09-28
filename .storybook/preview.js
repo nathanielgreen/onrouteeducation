@@ -1,15 +1,7 @@
-import React from "react";
 import { action } from "@storybook/addon-actions";
-import { addDecorator } from "@storybook/react";
-
-import { GlobalStyle } from "../src/layouts/DefaultLayout.js";
-
-addDecorator(story => (
-  <>
-    <GlobalStyle />
-    {story()}
-  </>
-));
+export const parameters = {
+  actions: { argTypesRegex: "^on[A-Z].*" },
+};
 // Gatsby's Link overrides:
 // Gatsby Link calls the `enqueue` & `hovering` methods on the global variable ___loader.
 // This global object isn't set in storybook context, requiring you to override it to empty functions (no-op),
@@ -18,9 +10,8 @@ global.___loader = {
   enqueue: () => {},
   hovering: () => {},
 };
-
-// __PATH_PREFIX__ is used inside gatsby-link an other various places. For storybook not to crash, you need to set it as well.
-global.__PATH_PREFIX__ = "";
+// This global variable is prevents the "__BASE_PATH__ is not defined" error inside Storybook.
+global.__BASE_PATH__ = "/";
 
 // Navigating through a gatsby app using gatsby-link or any other gatsby component will use the `___navigate` method.
 // In Storybook it makes more sense to log an action than doing an actual navigate. Checkout the actions addon docs for more info: https://github.com/storybookjs/storybook/tree/master/addons/actions.
