@@ -5,9 +5,10 @@ import Header from "../components/Header.js";
 import Subheader from "../components/Subheader.js";
 import Paragraph from "../components/Paragraph.js";
 import Padding from "../components/Padding.js";
-import NavBox from "../components/NavBox/NavBox.js";
+import NavBox from "../components/NavBox/NavBox";
 import Person from "../components/Person.js";
 
+import DefaultTheme from "../themes/DefaultTheme";
 import DefaultLayout from "../layouts/DefaultLayout.js";
 
 import { red } from "../utils/colors.js";
@@ -25,7 +26,7 @@ const HomePageTemplate = ({ heading, services, who }) => {
   };
 
   return (
-    <DefaultLayout>
+    <DefaultTheme>
       <Header text={heading} color={red} image="images/uploads/header.jpg" />
       <Padding>
         <Subheader text={services.heading} />
@@ -57,7 +58,7 @@ const HomePageTemplate = ({ heading, services, who }) => {
         ))}
         <Paragraph text={who.paragraph2} />
       </Padding>
-    </DefaultLayout>
+    </DefaultTheme>
   );
 };
 
