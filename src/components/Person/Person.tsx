@@ -5,7 +5,7 @@ const Wrapper = styled.div`
   width: 100%;
   height: 100vw;
   max-height: 350px;
-  max-width: 400px;
+  max-width: 450px;
   position: relative;
 `;
 
