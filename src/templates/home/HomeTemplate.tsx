@@ -26,6 +26,17 @@ const PersonBoxWrapper = styled.div`
   }
 `;
 
+const ContentWrapper = styled.div`
+  max-width: ${props => props.theme.maxWidth};
+  margin: 0 auto;
+  padding: 8px 8px;
+`;
+
+const NavBoxWrapper = styled(ContentWrapper)`
+  display: flex;
+  flex-direction: column;
+`;
+
 export type HomePageTemplateProps = {
   heading: string;
   services: {
@@ -65,11 +76,11 @@ const HomePageTemplate = ({ heading, services, who }) => {
   return (
     <DefaultTheme>
       <Header text={heading} color="red" image="images/uploads/header.jpg" />
-      <Padding width="100%">
+      <ContentWrapper>
         <Subheader text={services.heading} />
         <Paragraph text={services.paragraph} />
-      </Padding>
-      <Padding width="100%">
+      </ContentWrapper>
+      <NavBoxWrapper>
         {services.links.map((link, index) => (
           <NavBox
             key={index}
@@ -80,8 +91,8 @@ const HomePageTemplate = ({ heading, services, who }) => {
             image={link.image}
           ></NavBox>
         ))}
-      </Padding>
-      <Padding width="100%">
+      </NavBoxWrapper>
+      <ContentWrapper>
         <Subheader text={who.heading} />
         <Paragraph text={who.paragraph1} />
         <PersonBoxWrapper>
@@ -96,7 +107,7 @@ const HomePageTemplate = ({ heading, services, who }) => {
           ))}
         </PersonBoxWrapper>
         <Paragraph text={who.paragraph2} />
-      </Padding>
+      </ContentWrapper>
     </DefaultTheme>
   );
 };

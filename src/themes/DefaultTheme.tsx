@@ -22,6 +22,7 @@ export default ({ children }) => {
       lg: "1024px",
       xl: "1280px",
     },
+    maxWidth: "850px",
   };
   return (
     <ThemeProvider theme={theme}>
