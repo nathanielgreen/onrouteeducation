@@ -18,7 +18,7 @@ const PersonBoxWrapper = styled.div`
   width: 100%;
   margin: 0 -10px;
   & > div {
-    margin: 10px;
+    margin: 30px 10px;
   }
   @media (max-width: ${props => props.theme.breakpoints.sm}) {
     flex-direction: column;
@@ -32,7 +32,7 @@ const PersonBoxWrapper = styled.div`
 const ContentWrapper = styled.div`
   max-width: ${props => props.theme.maxWidth};
   margin: 0 auto;
-  padding: 8px 8px;
+  padding: 16px 8px;
 `;
 
 const NavBoxWrapper = styled(ContentWrapper)`
