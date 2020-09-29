@@ -26,7 +26,10 @@ const Overlay = styled.div`
   z-index: 2;
   width: 100%;
   content: "";
-  background: ${props => props.theme.colors[props.color]};
+  background: ${props =>
+    props.theme.colors[props.color]
+      ? props.theme.colors[props.color]
+      : props.color};
   opacity: 0.85;
 `;
 
