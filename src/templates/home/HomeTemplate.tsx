@@ -16,13 +16,15 @@ const PersonBoxWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  margin: 0 -10px;
   & > div {
     margin: 10px;
   }
   @media (max-width: ${props => props.theme.breakpoints.sm}) {
     flex-direction: column;
+    margin: 0;
     & > div {
-      margin: 10px;
+      margin: 10px 0;
     }
   }
 `;

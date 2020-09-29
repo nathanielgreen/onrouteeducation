@@ -7,22 +7,25 @@ import DefaultLayout from "../layouts/DefaultLayout.js";
 import Padding from "../components/Padding.js";
 import Header from "../components/Header.js";
 import Subheader from "../components/Subheader.js";
+import DefaultTheme from "../themes/DefaultTheme";
 
 const Body = styled.div`
-  min-height: 450px;
+  min-height: 300px;
 `;
 
 export const PageTemplate = ({
   frontmatter: { color, title, image },
   html,
 }) => (
-  <DefaultLayout>
-    <Header text={title} color={color} image={image} />
-    <Padding>
-      <Subheader text={title} />
-      <Body dangerouslySetInnerHTML={{ __html: html }} />
-    </Padding>
-  </DefaultLayout>
+  <DefaultTheme>
+    <DefaultLayout>
+      <Header text={title} color={color} image={image} />
+      <Padding>
+        <Subheader text={title} />
+        <Body dangerouslySetInnerHTML={{ __html: html }} />
+      </Padding>
+    </DefaultLayout>
+  </DefaultTheme>
 );
 
 PageTemplate.propTypes = {
