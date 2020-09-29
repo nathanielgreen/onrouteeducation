@@ -55,6 +55,7 @@ export type HomePageTemplateProps = {
       name: string;
       title: string;
       image: string;
+      imageFocus: string;
     }[];
     paragraph1: string;
     paragraph2: string;
@@ -102,7 +103,7 @@ const HomePageTemplate = ({ heading, services, who }) => {
               name={person.name}
               title={person.title}
               image={person.image}
-              backgroundPosition="left"
+              imageFocus={person.imageFocus}
             />
           ))}
         </PersonBoxWrapper>

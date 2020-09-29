@@ -25,6 +25,7 @@ export const query = graphql`
           name
           title
           image
+          imageFocus
         }
         paragraph1
         paragraph2

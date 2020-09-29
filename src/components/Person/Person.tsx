@@ -15,7 +15,7 @@ const BackgroundImage = styled.div`
   background-image: url(${props => props.image});
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: ${props => props.backgroundPosition};
+  background-position: ${props => props.imageFocus};
 `;
 
 const Banner = styled.div`
@@ -55,9 +55,16 @@ const BannerContent = styled.div`
   height: 100%;
 `;
 
-export default ({ name, title, image, backgroundPosition }) => (
+export type PersonProps = {
+  name: string;
+  title: string;
+  image: string;
+  backgroundPosition: string;
+};
+
+export default ({ name, title, image, imageFocus }) => (
   <Wrapper>
-    <BackgroundImage backgroundPosition={backgroundPosition} image={image} />
+    <BackgroundImage imageFocus={imageFocus} image={image} />
     <Banner>
       <BannerBackground />
       <BannerContent>
