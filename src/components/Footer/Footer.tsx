@@ -5,7 +5,7 @@ import Padding from "../Padding.js";
 
 const Wrapper = styled.footer`
   margin-top: 40px;
-  width: 100vw;
+  width: 100%;
   color: white;
   background: ${props => props.theme.colors.red};
   padding-bottom: 40px;

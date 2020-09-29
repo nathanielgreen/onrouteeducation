@@ -7,6 +7,7 @@ import Paragraph from "../../components/Paragraph.js";
 import Padding from "../../components/Padding.js";
 import NavBox from "../../components/NavBox/NavBox";
 import Person from "../../components/Person/Person";
+import Footer from "../../components/Footer/Footer";
 
 import DefaultTheme from "../../themes/DefaultTheme";
 
@@ -109,6 +110,11 @@ const HomePageTemplate = ({ heading, services, who }) => {
         </PersonBoxWrapper>
         <Paragraph text={who.paragraph2} />
       </ContentWrapper>
+      <Footer
+        heading="We love to talk."
+        subheading="Get in touch for an initial conversation about your professional and educational needs."
+        email="hello@onrouteeducation.com"
+      />
     </DefaultTheme>
   );
 };
