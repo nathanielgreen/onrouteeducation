@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 
-import HomePageTemplate from "../templates/homeTemplate";
+import HomePageTemplate from "../templates/home/HomeTemplate";
 
 const HomePage = ({ data }) => <HomePageTemplate {...data.homeJson} />;
 
