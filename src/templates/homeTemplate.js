@@ -5,7 +5,7 @@ import Header from "../components/Header.js";
 import Subheader from "../components/Subheader.js";
 import Paragraph from "../components/Paragraph.js";
 import Padding from "../components/Padding.js";
-import NavBox from "../components/NavBox.js";
+import NavBox from "../components/NavBox/NavBox.js";
 import Person from "../components/Person.js";
 
 import DefaultLayout from "../layouts/DefaultLayout.js";

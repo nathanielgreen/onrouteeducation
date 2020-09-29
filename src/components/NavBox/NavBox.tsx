@@ -1,6 +1,6 @@
-import React from "react"
-import styled from "styled-components"
-import { Link } from "gatsby"
+import React from "react";
+import styled from "styled-components";
+import { Link as GatsbyLink } from "gatsby";
 
 const BoxWrapper = styled.div`
   width: 80vw;
@@ -28,17 +28,20 @@ const BoxWrapper = styled.div`
     max-height: 350px;
     margin: 15px 10px;
   }
-`
+`;
 
 const Background = styled.div`
-  background: ${props => props.color};
+  background: ${props =>
+    props.theme.colors[props.color]
+      ? props.theme.colors[props.color]
+      : props.color};
   position: absolute;
   width: 100%;
   height: 100%;
   z-index: 1;
   border-radius: 6px;
   opacity: 85%;
-`
+`;
 
 const Content = styled.div`
   position: absolute;
@@ -46,15 +49,26 @@ const Content = styled.div`
   height: 100%;
   z-index: 2;
   opacity: 1;
-`
+`;
+
+const Link = styled(GatsbyLink)`
+  text-decoration: none;
+`;
 
 const Text = styled.h3`
   font-size: 1.5rem;
   width: 50%;
   color: white;
   border: none;
-  text-decoration: none;
-`
+`;
+
+export type NavBoxProps = {
+  text: string;
+  slug: string;
+  color: string;
+  alignSelf: "flex-start" | "flex-end" | "center";
+  image: string;
+};
 
 export default ({ text, slug, color, alignSelf, image }) => (
   <BoxWrapper alignSelf={alignSelf} color={color} image={image}>
@@ -65,4 +79,4 @@ export default ({ text, slug, color, alignSelf, image }) => (
       </Link>
     </Content>
   </BoxWrapper>
-)
+);
