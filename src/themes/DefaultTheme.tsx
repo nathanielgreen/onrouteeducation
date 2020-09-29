@@ -1,6 +1,12 @@
 import React from "react";
-import { ThemeProvider } from "styled-components";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
 import "../styles/normalize.css";
+
+const GlobalStyle = createGlobalStyle`
+  body {
+  font-family: "Barlow", Arial, sans-serif;
+  }
+`;
 
 export default ({ children }) => {
   const theme = {
@@ -10,5 +16,10 @@ export default ({ children }) => {
       orange: "#FFC8A5",
     },
   };
-  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+  return (
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      {children}
+    </ThemeProvider>
+  );
 };

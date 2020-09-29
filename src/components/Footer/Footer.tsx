@@ -9,7 +9,6 @@ const Wrapper = styled.footer`
   color: white;
   background: ${props => props.theme.colors.red};
   padding-bottom: 40px;
-  font-family: "Barlow", Arial, sans-serif;
 `;
 
 const Heading = styled.h4`
