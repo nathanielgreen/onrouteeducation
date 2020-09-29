@@ -1,17 +1,37 @@
 import React from "react";
-import PropTypes from "prop-types";
 
-import Header from "../components/Header.js";
+import Header from "../components/Header/Header";
 import Subheader from "../components/Subheader.js";
 import Paragraph from "../components/Paragraph.js";
 import Padding from "../components/Padding.js";
 import NavBox from "../components/NavBox/NavBox";
-import Person from "../components/Person.js";
+import Person from "../components/Person/Person";
 
 import DefaultTheme from "../themes/DefaultTheme";
-import DefaultLayout from "../layouts/DefaultLayout.js";
 
-import { red } from "../utils/colors.js";
+export type HomePageTemplateProps = {
+  heading: string;
+  services: {
+    heading: string;
+    paragraph: string;
+    links: {
+      link: string;
+      text: string;
+      image: string;
+      color: string;
+    }[];
+  };
+  who: {
+    heading: string;
+    people: {
+      name: string;
+      title: string;
+      image: string;
+    }[];
+    paragraph1: string;
+    paragraph2: string;
+  };
+};
 
 const HomePageTemplate = ({ heading, services, who }) => {
   const boxPositioning = index => {
@@ -27,7 +47,7 @@ const HomePageTemplate = ({ heading, services, who }) => {
 
   return (
     <DefaultTheme>
-      <Header text={heading} color={red} image="images/uploads/header.jpg" />
+      <Header text={heading} color="red" image="images/uploads/header.jpg" />
       <Padding>
         <Subheader text={services.heading} />
         <Paragraph text={services.paragraph} />
@@ -62,32 +82,4 @@ const HomePageTemplate = ({ heading, services, who }) => {
   );
 };
 
-HomePageTemplate.propTypes = {
-  heading: PropTypes.string.isRequired,
-  services: PropTypes.exact({
-    heading: PropTypes.string.isRequired,
-    paragraph: PropTypes.string.isRequired,
-    links: PropTypes.arrayOf(
-      PropTypes.exact({
-        link: PropTypes.string.isRequired,
-        text: PropTypes.string.isRequired,
-        image: PropTypes.string.isRequired,
-        color: PropTypes.string.isRequired,
-      })
-    ),
-  }),
-  who: PropTypes.exact({
-    heading: PropTypes.string.isRequired,
-    people: PropTypes.arrayOf(
-      PropTypes.exact({
-        name: PropTypes.string.isRequired,
-        title: PropTypes.string.isRequired,
-        image: PropTypes.string.isRequired,
-      })
-    ),
-    paragraph1: PropTypes.string.isRequired,
-    paragraph2: PropTypes.string.isRequired,
-  }),
-};
-
-export { HomePageTemplate };
+export default HomePageTemplate;
