@@ -1,8 +1,8 @@
 import React from "react";
-import Footer from "../Footer.js";
+import Footer from "./Footer";
 
 export default {
-  title: "Components/FooterOld",
+  title: "Components/Footer",
   component: Footer,
 };
 
