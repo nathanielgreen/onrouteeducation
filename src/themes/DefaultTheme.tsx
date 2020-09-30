@@ -4,7 +4,7 @@ import "../styles/normalize.css";
 
 const GlobalStyle = createGlobalStyle`
   body {
-  background-color: #ffffff;
+    background-color: #ffffff;
     font-family: "Barlow", Arial, sans-serif;
   }
 `;
@@ -15,6 +15,11 @@ export default ({ children }) => {
       red: "#FF8B7D",
       blue: "#7DB5FF",
       orange: "#FFC8A5",
+    },
+    fontSizes: {
+      heading: "2.5rem",
+      subheading: "2rem",
+      body: "1.2rem",
     },
     breakpoints: {
       sm: "640px",

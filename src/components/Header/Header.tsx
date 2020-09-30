@@ -38,7 +38,7 @@ const Text = styled.h1`
   position: relative;
   z-index: 3;
   font-family: "Barlow", Arial, sans-serif;
-  font-size: 2.5rem;
+  font-size: ${(props) => props.theme.fontSizes.heading};
 `;
 
 const Word = styled.span`
@@ -51,7 +51,7 @@ export type HeaderProps = {
   image: string;
 };
 
-const Header = ({ text, color, image }) => (
+const Header: React.FC<HeaderProps> = ({ text, color, image }) => (
   <Wrapper image={image}>
     <Overlay color={color} />
     <Text>
