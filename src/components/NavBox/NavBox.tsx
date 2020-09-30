@@ -7,8 +7,8 @@ const BoxWrapper = styled.div`
   height: 80vw;
   max-width: 350px;
   max-height: 250px;
-  align-self: ${props => props.alignSelf};
-  background-image: url(${props => props.image});
+  align-self: ${(props) => props.alignSelf};
+  background-image: url(${(props) => props.image});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -31,7 +31,7 @@ const BoxWrapper = styled.div`
 `;
 
 const Background = styled.div`
-  background: ${props =>
+  background: ${(props) =>
     props.theme.colors[props.color]
       ? props.theme.colors[props.color]
       : props.color};
@@ -65,12 +65,18 @@ const Text = styled.h3`
 export type NavBoxProps = {
   text: string;
   slug: string;
-  color: string;
+  color: "red" | "blue" | "orange";
   alignSelf: "flex-start" | "flex-end" | "center";
   image: string;
 };
 
-export default ({ text, slug, color, alignSelf, image }) => (
+const NavBox: React.FC<NavBoxProps> = ({
+  text,
+  slug,
+  color,
+  alignSelf,
+  image,
+}) => (
   <BoxWrapper alignSelf={alignSelf} color={color} image={image}>
     <Background color={color} />
     <Content>
@@ -80,3 +86,5 @@ export default ({ text, slug, color, alignSelf, image }) => (
     </Content>
   </BoxWrapper>
 );
+
+export default NavBox;
