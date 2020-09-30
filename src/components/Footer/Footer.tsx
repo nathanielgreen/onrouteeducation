@@ -7,7 +7,7 @@ const Wrapper = styled.footer`
   margin-top: 40px;
   width: 100%;
   color: white;
-  background: ${props => props.theme.colors.red};
+  background: ${(props) => props.theme.colors.red};
   padding-bottom: 40px;
 `;
 
@@ -34,13 +34,13 @@ const Button = styled.button`
   padding: 10px 20px;
 `;
 
-type FooterProps = {
+export type FooterProps = {
   heading: string;
   subheading: string;
   email: string;
 };
 
-export default ({ heading, subheading, email }: FooterProps) => (
+const Footer = ({ heading, subheading, email }: FooterProps) => (
   <Wrapper>
     <Padding>
       <Heading>{heading}</Heading>
@@ -49,3 +49,12 @@ export default ({ heading, subheading, email }: FooterProps) => (
     </Padding>
   </Wrapper>
 );
+
+Footer.defaultProps = {
+  heading: "We love to talk.",
+  subheading:
+    "Get in touch for an initial conversation about your professional and educational needs.",
+  email: "hello@onrouteeducation.com",
+} as FooterProps;
+
+export default Footer;

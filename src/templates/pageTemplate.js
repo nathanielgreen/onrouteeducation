@@ -3,9 +3,9 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 
+import { Header, Footer } from "../components";
 import DefaultLayout from "../layouts/DefaultLayout.js";
 import Padding from "../components/Padding.js";
-import Header from "../components/Header.js";
 import Subheader from "../components/Subheader.js";
 import DefaultTheme from "../themes/DefaultTheme";
 
@@ -18,13 +18,12 @@ export const PageTemplate = ({
   html,
 }) => (
   <DefaultTheme>
-    <DefaultLayout>
-      <Header text={title} color={color} image={image} />
-      <Padding>
-        <Subheader text={title} />
-        <Body dangerouslySetInnerHTML={{ __html: html }} />
-      </Padding>
-    </DefaultLayout>
+    <Header text={title} color={color} image={image} />
+    <Padding>
+      <Subheader text={title} />
+      <Body dangerouslySetInnerHTML={{ __html: html }} />
+    </Padding>
+    <Footer />
   </DefaultTheme>
 );
 

@@ -10,7 +10,7 @@ const Wrapper = styled.header`
   width: 100%;
   height: 85vh;
   position: relative;
-  background-image: url(${props => props.image});
+  background-image: url(${(props) => props.image});
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -26,7 +26,7 @@ const Overlay = styled.div`
   z-index: 2;
   width: 100%;
   content: "";
-  background: ${props =>
+  background: ${(props) =>
     props.theme.colors[props.color]
       ? props.theme.colors[props.color]
       : props.color};
@@ -45,7 +45,7 @@ const Word = styled.span`
   display: block;
 `;
 
-type HeaderProps = {
+export type HeaderProps = {
   text: string;
   color: "red" | "blue" | "orange";
   image: string;

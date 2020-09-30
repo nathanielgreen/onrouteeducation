@@ -20,7 +20,7 @@ const PersonBoxWrapper = styled.div`
   & > div {
     margin: 30px 10px;
   }
-  @media (max-width: ${props => props.theme.breakpoints.sm}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
     flex-direction: column;
     margin: 0;
     & > div {
@@ -30,7 +30,7 @@ const PersonBoxWrapper = styled.div`
 `;
 
 const ContentWrapper = styled.div`
-  max-width: ${props => props.theme.maxWidth};
+  max-width: ${(props) => props.theme.maxWidth};
   margin: 0 auto;
   padding: 16px 8px;
 `;
@@ -66,7 +66,7 @@ export type HomePageTemplateProps = {
 };
 
 const HomePageTemplate = ({ heading, services, who }) => {
-  const boxPositioning = index => {
+  const boxPositioning = (index) => {
     switch (index) {
       case 0:
         return "flex-start";
@@ -112,11 +112,7 @@ const HomePageTemplate = ({ heading, services, who }) => {
         </PersonBoxWrapper>
         <Paragraph text={who.paragraph2} />
       </ContentWrapper>
-      <Footer
-        heading="We love to talk."
-        subheading="Get in touch for an initial conversation about your professional and educational needs."
-        email="hello@onrouteeducation.com"
-      />
+      <Footer />
     </DefaultTheme>
   );
 };

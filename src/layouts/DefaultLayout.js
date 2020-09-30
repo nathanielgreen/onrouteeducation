@@ -2,7 +2,7 @@ import React from "react";
 import Helmet from "react-helmet";
 import { createGlobalStyle } from "styled-components";
 
-import Footer from "../components/Footer.js";
+import { Footer } from "../components";
 
 export const GlobalStyle = createGlobalStyle`
 	html {
