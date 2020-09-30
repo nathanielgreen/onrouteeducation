@@ -8,12 +8,18 @@ import Person from "./Person/Person";
 import type { PersonProps } from "./Person/Person";
 import Padding from "./Padding/Padding";
 import type { PaddingProps } from "./Padding/Padding";
+import Subheader from "./Subheader/Subheader";
+import type { SubheaderProps } from "./Subheader/Subheader";
+import Paragraph from "./Paragraph/Paragraph";
+import type { ParagraphProps } from "./Paragraph/Paragraph";
 
-export { Footer, Header, NavBox, Person, Padding };
+export { Footer, Header, NavBox, Person, Padding, Subheader, Paragraph };
 export type {
   FooterProps,
   HeaderProps,
   NavBoxProps,
   PersonProps,
   PaddingProps,
+  SubheaderProps,
+  ParagraphProps,
 };

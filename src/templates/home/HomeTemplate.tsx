@@ -1,13 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
-import Header from "../../components/Header/Header";
-import Subheader from "../../components/Subheader.js";
-import Paragraph from "../../components/Paragraph.js";
-import Padding from "../../components/Padding.js";
-import NavBox from "../../components/NavBox/NavBox";
-import Person from "../../components/Person/Person";
-import Footer from "../../components/Footer/Footer";
+import {
+  Header,
+  Subheader,
+  Padding,
+  NavBox,
+  Person,
+  Footer,
+  Paragraph,
+} from "../../components";
 
 import DefaultTheme from "../../themes/DefaultTheme";
 
