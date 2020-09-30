@@ -35,9 +35,9 @@ const Button = styled.button`
 `;
 
 export type FooterProps = {
-  heading: string;
-  subheading: string;
-  email: string;
+  heading?: string;
+  subheading?: string;
+  email?: string;
 };
 
 const Footer: React.FC<FooterProps> = ({

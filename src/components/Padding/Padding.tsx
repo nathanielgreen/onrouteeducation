@@ -22,8 +22,10 @@ export type PaddingProps = {
   width?: string;
 };
 
-export default ({ children, width }) => (
+const Padding: React.FC<PaddingProps> = ({ children, width }) => (
   <Shell>
     <Wrapper width={width}>{children}</Wrapper>
   </Shell>
 );
+
+export default Padding;
