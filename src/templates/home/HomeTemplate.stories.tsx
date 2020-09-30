@@ -6,7 +6,7 @@ export default {
   component: HomeTemplate,
 };
 
-const Template = args => <HomeTemplate {...args} />;
+const Template = (args) => <HomeTemplate {...args} />;
 
 export const Example = Template.bind({});
 Example.args = {
@@ -47,12 +47,14 @@ Example.args = {
       {
         name: "Mary",
         title: "Title",
+        imageFocus: "center center",
         image:
           "https://images.unsplash.com/photo-1601307002864-31c17961eecd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
       },
       {
         name: "Mary",
         title: "Title",
+        imageFocus: "center center",
         image:
           "https://images.unsplash.com/photo-1601307002864-31c17961eecd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
       },
