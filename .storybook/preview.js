@@ -3,6 +3,7 @@ import { action } from "@storybook/addon-actions";
 import DefaultTheme from "../src/themes/DefaultTheme";
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
+  controls: { expanded: true },
   layout: "fullscreen",
 };
 // Gatsby's Link overrides:
@@ -19,12 +20,12 @@ global.__BASE_PATH__ = "/";
 // Navigating through a gatsby app using gatsby-link or any other gatsby component will use the `___navigate` method.
 // In Storybook it makes more sense to log an action than doing an actual navigate. Checkout the actions addon docs for more info: https://github.com/storybookjs/storybook/tree/master/addons/actions.
 
-window.___navigate = pathname => {
+window.___navigate = (pathname) => {
   action("NavigateTo:")(pathname);
 };
 
 export const decorators = [
-  Story => (
+  (Story) => (
     <DefaultTheme>
       <Story />
     </DefaultTheme>
