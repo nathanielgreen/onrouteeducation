@@ -40,7 +40,11 @@ export type FooterProps = {
   email: string;
 };
 
-const Footer = ({ heading, subheading, email }: FooterProps) => (
+const Footer: React.FC<FooterProps> = ({
+  heading = "We love to talk",
+  subheading = "Get in touch for an initial conversation about your professional and educational needs.",
+  email = "hello@onrouteeducation.com",
+}) => (
   <Wrapper>
     <Padding>
       <Heading>{heading}</Heading>
@@ -49,12 +53,5 @@ const Footer = ({ heading, subheading, email }: FooterProps) => (
     </Padding>
   </Wrapper>
 );
-
-Footer.defaultProps = {
-  heading: "We love to talk.",
-  subheading:
-    "Get in touch for an initial conversation about your professional and educational needs.",
-  email: "hello@onrouteeducation.com",
-} as FooterProps;
 
 export default Footer;
