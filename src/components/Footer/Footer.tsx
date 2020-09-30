@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import Padding from "../Padding.js";
+import { Padding } from "../";
 
 const Wrapper = styled.footer`
   margin-top: 40px;
