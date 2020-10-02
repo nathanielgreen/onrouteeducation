@@ -8,6 +8,8 @@ collections:
   - name: "home"
     delete: false
     format: json
+    editor:
+      preview: false
     label: "Home Page"
     folder: "src/data/home/"
     create: false
@@ -64,6 +66,8 @@ collections:
   - name: "pages"
     label: "Pages"
     folder: "src/data/pages/"
+    editor:
+      preview: false
     create: false
     slug: "{{slug}}"
     fields:
