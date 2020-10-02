@@ -11,7 +11,7 @@ const PagePreview = ({ entry, getAsset }) => {
         frontmatter={{
           title: data.title,
           color: data.color,
-          image: "",
+          image: getAsset(data.image),
         }}
         html={data.body}
       />

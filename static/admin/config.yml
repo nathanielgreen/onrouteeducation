@@ -81,3 +81,4 @@ collections:
           - { label: "Red", value: "#FF8B7D" }
           - { label: "Blue", value: "#7DB5FF" }
           - { label: "Orange", value: "#FFC8A5" }
+      - { label: "Header Image", name: "image", widget: "image" }
