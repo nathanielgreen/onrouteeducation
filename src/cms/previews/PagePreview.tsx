@@ -5,7 +5,20 @@ import PageTemplate from "../../templates/page/PageTemplate";
 const PagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(["data"]).toJS();
 
-  if (data) return <div>Hello</div>;
+  if (data) {
+    return (
+      <PageTemplate
+        frontmatter={{
+          title: data.title,
+          color: data.color,
+          image: "",
+        }}
+        html={data.body}
+      />
+    );
+  }
+
+  return <div>Loading...</div>;
 };
 
 PagePreview.propTypes = {
