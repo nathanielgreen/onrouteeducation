@@ -9,7 +9,13 @@ module.exports = {
     title: "On Route Education",
   },
   plugins: [
-    `gatsby-plugin-netlify-cms`,
+    `gatsby-plugin-typescript`,
+    {
+      resolve: `gatsby-plugin-netlify-cms`,
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.ts`,
+      },
+    },
     `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -29,5 +35,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-netlify`,
   ],
-}
+};

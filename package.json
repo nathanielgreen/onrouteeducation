@@ -23,6 +23,7 @@
     "babel-plugin-styled-components": "^1.11.1",
     "gatsby": "^2.24.66",
     "gatsby-background-image": "^0.10.2",
+    "gatsby-plugin-netlify": "^2.3.16",
     "gatsby-plugin-netlify-cms": "^4.3.15",
     "gatsby-plugin-react-helmet": "^3.3.12",
     "gatsby-plugin-sharp": "^2.6.37",
