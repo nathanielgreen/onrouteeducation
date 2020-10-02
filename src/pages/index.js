@@ -9,6 +9,7 @@ export const query = graphql`
   {
     homeJson {
       heading
+      headerImage
       services {
         heading
         paragraph

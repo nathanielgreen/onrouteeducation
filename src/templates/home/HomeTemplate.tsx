@@ -44,6 +44,7 @@ const NavBoxWrapper = styled(ContentWrapper)`
 
 export type HomePageTemplateProps = {
   heading: string;
+  headerImage: string;
   services: {
     heading: string;
     paragraph: string;
@@ -67,7 +68,7 @@ export type HomePageTemplateProps = {
   };
 };
 
-const HomePageTemplate = ({ heading, services, who }) => {
+const HomePageTemplate = ({ heading, headerImage, services, who }) => {
   const boxPositioning = (index) => {
     switch (index) {
       case 0:
@@ -81,7 +82,7 @@ const HomePageTemplate = ({ heading, services, who }) => {
 
   return (
     <DefaultTheme>
-      <Header text={heading} color="red" image="images/uploads/header.jpg" />
+      <Header text={heading} color="red" image={headerImage} />
       <ContentWrapper>
         <Subheader text={services.heading} />
         <Paragraph text={services.paragraph} />

@@ -7,8 +7,6 @@ public_folder: "/images/uploads"
 collections:
   - name: "home"
     delete: false
-    editor:
-      preview: false
     format: json
     label: "Home Page"
     folder: "src/data/home/"
@@ -16,6 +14,7 @@ collections:
     slug: "data"
     fields:
       - { label: "Heading", name: "heading", widget: "string" }
+      - { label: "Header Image", name: "headerImage", widget: "image" }
       - label: "Services"
         name: "services"
         widget: "object"
