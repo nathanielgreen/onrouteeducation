@@ -6,6 +6,10 @@ import DefaultTheme from "../../themes/DefaultTheme";
 
 const Body = styled.div`
   min-height: 300px;
+  width: 100%;
+  & img {
+    width: 100%;
+  }
 `;
 
 export type PageTemplateProps = {
